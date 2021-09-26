@@ -2,7 +2,9 @@ import axios from 'axios';
 
 import authService from './auth';
 
-function withTokenRequestInterceptor(config) {
+const AUTH_PREFIX = 'Bearer';
+
+function insertTokenToRequest(config) {
   const {
     withToken,
     ...otherReqConfig
@@ -13,21 +15,25 @@ function withTokenRequestInterceptor(config) {
   }
 
   const token = authService.getToken();
-  otherReqConfig.headers.Authorization = `Bearer ${token}`;
+  otherReqConfig.headers.Authorization = `${AUTH_PREFIX} ${token}`;
 
   return otherReqConfig;
 }
 
-const requestInterceptors = [withTokenRequestInterceptor];
+const requestInterceptors = [insertTokenToRequest];
 
 class HttpService {
   constructor(instance) {
     this.instance = instance;
-    HttpService.injectRequestResponseInspectors(this.instance, requestInterceptors);
+    HttpService.injectRequestInspectors(this.instance, requestInterceptors);
   }
 
-  static injectRequestResponseInspectors(instance, interceptors) {
-    interceptors.forEach((interceptor) => instance.interceptors.request.use(interceptor));
+  static injectRequestInspectors(instance, interceptors) {
+    interceptors.forEach(instance.interceptors.request.use);
+  }
+
+  getInstance() {
+    return this.instance;
   }
 
   get(url, config) {

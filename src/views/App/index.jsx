@@ -1,4 +1,5 @@
-import 'src/assets/css/reset.css';
+import 'src/assets/styles/reset';
+import 'src/assets/styles/rtl';
 
 function App() {
   return <div>App</div>;
