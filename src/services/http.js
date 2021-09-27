@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import authService from './auth';
 
 const AUTH_PREFIX = 'Bearer';

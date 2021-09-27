@@ -39,7 +39,7 @@ module.exports = {
         js: 'never',
         mjs: 'never',
         jsx: 'never',
-        scss: 'never',
+        scss: 'always',
       },
     ],
     'react-hooks/rules-of-hooks': 'error',
