@@ -1,0 +1,33 @@
+@import 'src/styles/variables.scss';
+
+.kit-flex-container {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &--align-end {
+    align-items: flex-end;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--justify-end {
+    justify-content: flex-end;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+}

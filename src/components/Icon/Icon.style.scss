@@ -1,0 +1,27 @@
+@import 'src/styles/variables.scss';
+
+@mixin font-size {
+  &--xs {
+    font-size: $font-size-18;
+  }
+    
+  &--sm {
+    font-size: $font-size-24;
+  }
+    
+  &--md {
+    font-size: $font-size-36;
+  }
+    
+  &--lg {
+    font-size: $font-size-48;
+  }
+}
+
+.material-icons {
+  @include font-size;
+}
+
+.material-icons-outlined {
+  @include font-size;
+}
