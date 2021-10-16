@@ -1,0 +1,22 @@
+@import 'src/styles/variables.scss';
+
+.kit-chip {
+  color: white;
+
+  background-color: $brand-primary;
+  border-radius: $space-3;
+  padding: $space-1 $space-2;
+
+  &__text {
+    font-size: $font-size-14;
+  }
+
+  &__icon {
+    font-size: $font-size-14;
+    margin-left: $space-1;
+
+    &--no-offset {
+      margin-left: 0;
+    }
+  }
+}

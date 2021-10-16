@@ -9,8 +9,18 @@ function Button({
   onClick,
   className,
   secondary,
+  fullWidth,
+  rounded,
 }) {
-  const buttonClassName = classNames('kit-button', className, { 'kit-button--secondary': secondary });
+  const buttonClassName = classNames(
+    'kit-button',
+    className,
+    {
+      'kit-button--secondary': secondary,
+      'kit-button--full-width': fullWidth,
+      'kit-button--rounded': rounded,
+    },
+  );
 
   // eslint-disable-next-line react/button-has-type
   return <button type={type} onClick={onClick} className={buttonClassName}>{children}</button>;
@@ -22,6 +32,8 @@ Button.defaultProps = {
   onClick: () => null,
   className: '',
   secondary: false,
+  fullWidth: false,
+  rounded: false,
 };
 
 Button.propTypes = {
@@ -30,6 +42,8 @@ Button.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
   secondary: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  rounded: PropTypes.bool,
 };
 
 export default Button;

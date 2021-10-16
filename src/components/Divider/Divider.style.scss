@@ -1,0 +1,10 @@
+@import 'src/styles/variables.scss';
+
+.kit-divider {
+  height: $space-exact-2;
+
+  background-color: $black-divider;
+  margin: $space-1 0;
+
+  border: none;
+}

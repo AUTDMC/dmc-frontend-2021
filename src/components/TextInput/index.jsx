@@ -27,7 +27,9 @@ function TextInput({
     onChange(newValue);
   }
 
+  const hasError = errors?.length > 0;
   const blockClassName = classNames('kit-input', className);
+  const inputClassName = classNames('kit-input__controller', { 'kit-input__controller--invalid': hasError });
 
   return (
     <FlexContainer className={blockClassName} column>
@@ -37,11 +39,11 @@ function TextInput({
       </FlexContainer>
       <input
         id={id}
-        className="kit-input__controller"
-        placeholder={placeholder}
         type={type}
-        onChange={handleChange}
         value={value}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className={inputClassName}
       />
       <Errors errors={errors} />
     </FlexContainer>

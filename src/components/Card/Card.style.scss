@@ -1,0 +1,27 @@
+@import 'src/styles/variables.scss';
+
+.kit-card {
+  background-color: $black-tint;
+  border-radius: $space-1;
+  padding: $space-8;
+
+  flex-grow: 1;
+
+  &__head {
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $brand-primary;
+    font-size: $font-size-24;
+    font-weight: bold;
+
+    &--secondary {
+      color: $brand-secondary;
+    }
+  }
+
+  &__content {
+    margin: $space-4 0;
+  }
+}

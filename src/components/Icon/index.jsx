@@ -3,6 +3,8 @@ import classNames from 'classnames';
 
 import { SIZE } from './constants';
 
+import './Icon.style.scss';
+
 function Icon({
   name,
   outlined,
