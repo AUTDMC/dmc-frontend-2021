@@ -1,0 +1,10 @@
+@import 'src/styles/variables.scss';
+
+.kit-input {
+  &__error {
+    margin-top: $space-1;
+    color: $error-primary;
+    
+    font-size: $font-size-14;
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/styles/variables.scss';
+
+.kit-input {
+  &__head {
+    justify-content: space-between;
+    margin-bottom: $space-1;
+  }
+
+  &__controller {
+    border: none;
+    outline: none;
+    padding: $space-1 $space-2;
+    
+    background-color: $gray;
+    font-size: $font-size-18;
+    color: $black;
+
+    box-sizing: border-box;
+
+    transition: all .3s ease-in;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $gray-dark;
+    }
+  }
+}

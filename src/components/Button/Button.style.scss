@@ -1,0 +1,28 @@
+@import 'src/styles/variables.scss';
+
+.kit-button {
+  cursor: pointer;
+
+  border: none;
+  width: 100%;
+  text-align: center;
+
+  background-color: $brand-primary;
+  color: $white;
+
+  padding: $space-2;
+
+  transition: all .3s ease-in;
+
+  &:hover {
+    background-color: $brand-primary-dark;
+  }
+
+  &--secondary {
+    background-color: $brand-secondary;
+    
+    &:hover {
+      background-color: $brand-secondary-dark;
+    }
+  }
+}
